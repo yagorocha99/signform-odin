@@ -1,52 +1,155 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+:root{
+    --color: #e5e5e5;
+    --txt: rgb(255, 255, 255)
+}
 
-body {
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--txt);
+}
+
+body{
+    background-color: rgb(155, 155, 155);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+}
+
+
+.container {
     display: flex;
+    width: 1350px;
+    height: 650px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.container,
+.logo,
+.register{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.picture{
+    flex: 1;
+    background-image: url(./coffee.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+}
+
+.logo{
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 100px;
+    padding: 15px 0;
     justify-content: center;
     align-items: center;
-    font-family: Roboto;
-    background-color: rgb(1, 35, 12);
 }
 
-.container{
-    display: flex;
-    border-radius: 6px;
-    width: 75vw;
-}
-
-.containerForm{
-    display: grid;
-    padding: 2vw;
-    background-color: rgb(223, 222, 224);
-}
-
-.containerImage{
-    width: 500px;
-    justify-items: center;
-    justify-content: center;
-}
-
-.containerImage>img{
+.register {
+    height: 120px;
+    padding: 15px 0;
     justify-content: center;
     align-items: center;
-    align-self: center;
-    align-content: center;
+    position: relative; /* Adicione esta linha para usar propriedades de posição */
+    bottom: -410px; /* Ajuste este valor conforme necessário para mover o registro para cima ou para baixo */
+}
+.register>.button>button{
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-.App {
+.register>.button>button:hover{
+    background-color: var(--color);
+    color: black;
+}
+
+h1{
+    color: white;
+    font-size: 26px;
+}
+
+.right{
+    width: 55vw;
+    background-color: #000503;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-left: 3vw;
 }
 
-label{
-    padding: 1vh;
+.first-text{
+    font-weight: 500;
+    width: 90%;
+    font-size: 1.2vw;
 }
 
-input,select{
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
+.second-text{
+    margin: 40px 0 80px;
 }
+
+
+.form{
+    background-color: #000503;
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.input{
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 50%;
+}
+
+.form-title{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+input{
+    background-color: rgb(2, 2, 2);
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 3px;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid var(--color);
+}
+
+button{
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color);
+    font-weight: 700;
+    font-size: 1.2vw;
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin-top: 1vw;
+}
+
+button:hover{
+    background-color: var(--color);
+    color: black;
+}
+
+
+
+
+
