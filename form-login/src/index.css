@@ -2,10 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Roboto;
-    background-color: rgb(1, 35, 12);
+@layer base {
+  :root {
+    --color: #e5e5e5;
+    --txt: rgb(255, 255, 255);
+  }
+
+  * {
+    @apply m-0 p-0 box-border font-poppins text-white;
+  }
+
+  body {
+    @apply bg-gray-900 flex justify-center items-center h-screen;
+  }
+
+  .container {
+    @apply flex w-[1350px] h-[650px] rounded-lg shadow-md overflow-hidden;
+  }
+
+  .container,
+  .logo,
+  .register {
+    @apply flex flex-wrap;
+  }
+
+  .picture {
+    @apply flex-1 bg-center bg-cover bg-no-repeat w-[400px];
+    background-image: url(./coffee.jpg);
+  }
+
+  .logo {
+    @apply h-[120px] bg-black bg-opacity-30 relative top-[100px] py-4 justify-center items-center;
+  }
+
+  .register {
+    @apply h-[120px] py-4 justify-center items-center relative bottom-[-380px];
+  }
+
+  .register > .button > button {
+    @apply bg-black bg-opacity-70;
+  }
+
+  .register > .button > button:hover {
+    @apply bg-[var(--color)] text-black;
+  }
+
+  h1 {
+    @apply text-white text-[1.625rem];
+  }
+
+  .right {
+    @apply flex-1 w-[700px] bg-[#000503] flex flex-col justify-center pl-[3vw];
+  }
+
+  .first-text {
+    @apply font-medium w-[90%] text-[1.125rem];
+  }
+
+  .second-text {
+    @apply mt-[40px] mb-[80px];
+  }
+
+  .form {
+    @apply bg-[#000503] flex flex-wrap w-[80%] gap-[20px] pt-[20px] pb-[20px];
+  }
+
+  .input {
+    @apply flex flex-col w-[40%] text-[0.7rem] uppercase opacity-50;
+  }
+
+  .form-title {
+    @apply w-full text-[1.125rem] font-medium;
+  }
+
+  input {
+    @apply bg-black border border-gray-900 rounded-sm;
+  }
+
+  input:focus {
+    @apply outline-none border-2 border-[var(--color)];
+  }
+
+  button {
+    @apply bg-transparent text-[var(--color)] font-bold text-[0.875rem] border-2 border-[var(--color)] rounded-md px-[40px] py-[10px] mt-[1vw];
+  }
+
+  button:hover {
+    @apply bg-[var(--color)] text-black;
+  }
 }
