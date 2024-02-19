@@ -28,7 +28,7 @@
 
   .picture {
     @apply flex-1 bg-center bg-cover bg-no-repeat w-[400px];
-    background-image: url(./coffee.jpg);
+    background-image: url(../public/coffee.jpg);
   }
 
   .logo {
