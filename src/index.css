@@ -13,11 +13,11 @@
   }
 
   body {
-    @apply bg-gray-900 flex justify-center items-center h-screen;
+    @apply bg-white flex justify-center items-center h-screen;
   }
 
   .container {
-    @apply flex w-[1350px] h-[650px] rounded-lg shadow-md overflow-hidden;
+    @apply flex w-full md:w-[1350px] h-auto md:h-[650px] rounded-lg shadow-black shadow-2xl overflow-hidden;
   }
 
   .container,
@@ -27,24 +27,34 @@
   }
 
   .picture {
-    @apply flex-1 bg-center bg-cover bg-no-repeat w-[400px];
+    @apply flex-1 bg-center bg-cover bg-no-repeat w-full md:w-[400px];
     background-image: url(../public/coffee.jpg);
   }
 
   .logo {
-    @apply h-[120px] bg-black bg-opacity-30 relative top-[100px] py-4 justify-center items-center;
+    @apply h-[120px] bg-black bg-opacity-30 relative py-4 justify-center items-center md:top-[100px];
   }
 
   .register {
-    @apply h-[120px] py-4 justify-center items-center relative bottom-[-380px];
+    @apply h-[120px] py-4 justify-center items-center relative md:bottom-[-380px];
   }
 
   .register > .button > button {
-    @apply bg-black bg-opacity-70;
+    @apply bg-black bg-opacity-70 z-10;
   }
-
+  
   .register > .button > button:hover {
     @apply bg-[var(--color)] text-black;
+  }  
+
+  @media (max-width: 640px) {
+    .logo {
+      order: 2;
+    }
+  
+    .register {
+      order: 1;
+    }
   }
 
   h1 {
@@ -52,7 +62,7 @@
   }
 
   .right {
-    @apply flex-1 w-[700px] bg-[#000503] flex flex-col justify-center pl-[3vw];
+    @apply flex-1 w-full md:w-[700px] bg-[#000503] flex flex-col justify-center pl-[3vw];
   }
 
   .first-text {
@@ -64,11 +74,11 @@
   }
 
   .form {
-    @apply bg-[#000503] flex flex-wrap w-[80%] gap-[20px] pt-[20px] pb-[20px];
+    @apply bg-[#000503] flex flex-wrap w-full md:w-[80%] gap-[20px] pt-[20px] pb-[20px];
   }
 
   .input {
-    @apply flex flex-col w-[40%] text-[0.7rem] uppercase opacity-50;
+    @apply flex flex-col w-full md:w-[40%] text-[0.7rem] uppercase opacity-50;
   }
 
   .form-title {
