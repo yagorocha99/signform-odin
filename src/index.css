@@ -14,11 +14,11 @@
 
   body {
     background-color: rgb(40, 40, 40);
-    @apply flex justify-center items-center h-screen;
+    @apply flex justify-center items-center md:h-screen;
   }
 
   .container {
-    @apply flex w-full md:w-[1350px] h-auto md:h-[650px] rounded-lg shadow-black shadow-2xl overflow-hidden;
+    @apply flex w-full md:w-[1350px] md:h-[650px] rounded-lg shadow-black shadow-2xl overflow-hidden;
   }
 
   .container,
@@ -28,16 +28,16 @@
   }
 
   .picture {
-    @apply flex-1 bg-center bg-cover bg-no-repeat w-full md:w-[400px];
+    @apply flex-1 bg-center bg-cover bg-no-repeat w-full h-auto md:w-[400px];
     background-image: url(../public/coffee.jpg);
   }
 
   .logo {
-    @apply h-[120px] bg-black bg-opacity-30 relative py-4 justify-center items-center md:top-[100px];
+    @apply md:h-[120px] bg-black bg-opacity-30 relative py-4 justify-center items-center md:top-[10%];
   }
 
   .register {
-    @apply h-[120px] py-4 justify-center items-center relative md:bottom-[-380px];
+    @apply md:h-[120px] py-4 justify-center items-center relative md:bottom-[-10%];
   }
 
   .register > .button > button {
@@ -50,16 +50,16 @@
 
   @media (max-width: 640px) {
     .logo {
-      order: 2;
+      order: 1;
     }
   
     .register {
-      order: 1;
+      order: 2;
     }
   }
 
   h1 {
-    @apply text-white text-[1.625rem];
+    @apply text-white text-sm md:text-[1.625rem];
   }
 
   .right {
@@ -67,7 +67,7 @@
   }
 
   .first-text {
-    @apply font-medium w-[90%] text-[1.125rem];
+    @apply font-medium w-[90%] text-sm md:text-[1.125rem];
   }
 
   .second-text {
@@ -83,7 +83,7 @@
   }
 
   .form-title {
-    @apply w-full text-[1.125rem] font-medium;
+    @apply w-full text-sm md:text-[1.125rem] font-medium;
   }
 
   input {
@@ -95,7 +95,7 @@
   }
 
   button {
-    @apply bg-transparent text-[var(--color)] font-bold text-[0.875rem] border-2 border-[var(--color)] rounded-md px-[40px] py-[10px] mt-[1vw];
+    @apply bg-transparent text-[var(--color)] font-bold text-sm md:text-[0.875rem] border-2 border-[var(--color)] rounded-md px-[40px] py-[10px] mt-[1vw];
   }
 
   button:hover {

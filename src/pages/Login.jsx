@@ -16,7 +16,7 @@ import { LoginForm } from '../components/LoginForm/LoginForm';
       </div>
       <div className="right">
         <div className="first-text ">
-          <p>This is not a real online service! BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla Bla!</p>
+          <p>This is not a real online service! Bla BlaBla BlaBla BlaBla BlaBla BlaBla Bla!</p>
           <p>Login to continue.</p>
           <p className="second-text">You know you want to.</p>
         </div>
