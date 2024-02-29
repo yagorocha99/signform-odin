@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color: #e5e5e5;
+    --txt: rgb(255, 255, 255);
+  }
+
+  * {
+    @apply m-0 p-0 box-border font-poppins text-white;
+  }
+
+  body {
+    background-color: rgb(40, 40, 40);
+    @apply flex justify-center items-center md:h-screen;
+  }
+
+  .container {
+    @apply flex w-full md:w-[1350px] md:h-[650px] rounded-lg shadow-black shadow-2xl overflow-hidden;
+  }
+
+  .container,
+  .logo,
+  .register {
+    @apply flex flex-wrap;
+  }
+
+  .picture {
+    @apply flex-1 bg-center bg-cover bg-no-repeat w-full h-auto md:w-[400px];
+    background-image: url(../public/coffee.jpg);
+  }
+
+  .logo {
+    @apply md:h-[120px] bg-black bg-opacity-30 relative py-4 justify-center items-center md:top-[10%];
+  }
+
+  .register {
+    @apply md:h-[120px] py-4 justify-center items-center relative md:bottom-[-10%];
+  }
+
+  .register > .button > button {
+    @apply bg-black bg-opacity-70 z-10;
+  }
+  
+  .register > .button > button:hover {
+    @apply bg-[var(--color)] text-black;
+  }  
+
+  @media (max-width: 640px) {
+    .logo {
+      order: 1;
+    }
+  
+    .register {
+      order: 2;
+    }
+  }
+
+  h1 {
+    @apply text-white text-sm md:text-[1.625rem];
+  }
+
+  .right {
+    @apply flex-1 w-full md:w-[700px] bg-[#000503] flex flex-col justify-center pl-[3vw];
+  }
+
+  .first-text {
+    @apply font-medium w-[90%] text-sm md:text-[1.125rem];
+  }
+
+  .second-text {
+    @apply mt-[40px] mb-[80px];
+  }
+
+  .form {
+    @apply bg-[#000503] flex flex-wrap w-full md:w-[80%] gap-[20px] pt-[20px] pb-[20px];
+  }
+
+  .input {
+    @apply flex flex-col w-full md:w-[40%] text-[0.7rem] uppercase opacity-50;
+  }
+
+  .form-title {
+    @apply w-full text-sm md:text-[1.125rem] font-medium;
+  }
+
+  input {
+    @apply bg-black border border-gray-900 rounded-sm;
+  }
+
+  input:focus {
+    @apply outline-none border-2 border-[var(--color)];
+  }
+
+  button {
+    @apply bg-transparent text-[var(--color)] font-bold text-sm md:text-[0.875rem] border-2 border-[var(--color)] rounded-md px-[40px] py-[10px] mt-[1vw];
+  }
+
+  button:hover {
+    @apply bg-[var(--color)] text-black;
+  }
+}
